@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>UI</title>
+    <link href="css/fomantic.min.css" rel="stylesheet">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>Ключ</td><td>Значение</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="input :${table}">
+        <td>
+            <span th:text="${input.getKey()}"/>
+        </td>
+        <td>
+            <span th:text="${input.getValue()}"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<button class th:text="OK" />
+</body>
+</html>
